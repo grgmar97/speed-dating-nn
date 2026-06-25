@@ -1,16 +1,11 @@
-let users = []; // пока храним в памяти
+const User = require('../models/user.model');
 
-exports.createUser = (data) => {
-    const newUser = {
-        id: Date.now(),
-        ...data
-    };
-
-    users.push(newUser);
-
+exports.createUser = async (data) => {
+    const newUser = new User(data);
+    await newUser.save();
     return newUser;
 };
 
-exports.getUsers = () => {
-    return users;
+exports.getUsers = async () => {
+    return User.find().sort({ createdAt: -1 });
 };

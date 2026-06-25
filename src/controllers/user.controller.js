@@ -6,7 +6,7 @@ exports.home = (req, res) => {
 };
 
 // регистрация пользователя
-exports.register = (req, res) => {
+exports.register = async (req, res) => {
     const { name, age, city, interests } = req.body;
 
     if (!name || !age || !city) {
@@ -15,15 +15,34 @@ exports.register = (req, res) => {
         });
     }
 
-    const user = userService.createUser({
-        name,
-        age,
-        city,
-        interests
-    });
+    try {
+        const user = await userService.createUser({
+            name,
+            age,
+            city,
+            interests
+        });
 
-    res.status(201).json({
-        message: "Пользователь зарегистрирован",
-        user
-    });
+        res.status(201).json({
+            message: "Пользователь зарегистрирован",
+            user
+        });
+    } catch (error) {
+        res.status(500).json({
+            error: "Не удалось сохранить пользователя",
+            details: error.message
+        });
+    }
+};
+
+exports.listUsers = async (req, res) => {
+    try {
+        const users = await userService.getUsers();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({
+            error: "Не удалось получить пользователей",
+            details: error.message
+        });
+    }
 };

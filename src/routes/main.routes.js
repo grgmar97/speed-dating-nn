@@ -9,4 +9,7 @@ router.get("/", userController.home);
 // регистрация участника
 router.post("/register", userController.register);
 
+// список пользователей
+router.get("/users", userController.listUsers);
+
 module.exports = router;
