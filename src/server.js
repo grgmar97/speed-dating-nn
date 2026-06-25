@@ -5,17 +5,16 @@ const { connectDatabase } = require("./config/database");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// чтобы читать JSON (для будущей регистрации)
+// Чтение JSON из формы заявки.
 app.use(express.json());
 
-// подключаем фронтенд (папка public)
+// Статический фронтенд из папки public.
 app.use(express.static(path.join(__dirname, "..", "public")));
 
-// подключаем маршруты
+// Маршруты API.
 const mainRoutes = require("./routes/main.routes");
 app.use("/", mainRoutes);
 
-// запуск сервера
 const startServer = async () => {
   await connectDatabase();
 

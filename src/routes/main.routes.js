@@ -3,13 +3,13 @@ const router = express.Router();
 
 const userController = require("../controllers/user.controller");
 
-// тестовый маршрут
+// Проверка сервера.
 router.get("/", userController.home);
 
-// регистрация участника
+// Регистрация участника.
 router.post("/register", userController.register);
 
-// список пользователей
+// Список заявок.
 router.get("/users", userController.listUsers);
 
 module.exports = router;
