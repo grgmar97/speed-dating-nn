@@ -13,8 +13,11 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="На главную">
-        <span class="brand-mark"></span>
-        <span>Живые знакомства NN</span>
+        <span class="brand-mark">SD</span>
+        <span class="brand-text">
+          <span>Speed Dating</span>
+          <small>Нижний Новгород</small>
+        </span>
       </a>
       <nav class="header-nav" aria-label="Основная навигация">
         <a href="#format">Формат</a>
@@ -24,56 +27,80 @@
         <a href="#audience">Кому подходит</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="header-action" href="#application">Оставить заявку</a>
+      <div class="header-actions">
+        <details class="messenger-menu">
+          <summary>
+            <span>Связаться</span>
+          </summary>
+          <div class="messenger-list">
+            <a href="https://wa.me/70000000000" target="_blank" rel="noopener">
+              <span class="messenger-icon whatsapp" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M12 3.25a8.58 8.58 0 0 0-7.3 13.1l-.95 3.4 3.5-.92A8.58 8.58 0 1 0 12 3.25Zm4.98 12.3c-.2.57-1.18 1.06-1.65 1.13-.42.06-.96.09-1.55-.1-.36-.11-.82-.27-1.4-.52-2.48-1.07-4.1-3.58-4.22-3.75-.12-.16-1-1.33-1-2.54s.63-1.8.86-2.05c.22-.25.49-.31.65-.31h.47c.15 0 .36-.06.57.43.2.5.7 1.72.76 1.84.06.13.1.28.02.44-.08.17-.12.27-.24.42-.13.15-.26.34-.37.45-.12.12-.25.25-.1.5.15.25.67 1.1 1.44 1.78.99.88 1.82 1.15 2.07 1.28.25.12.4.1.55-.07.15-.16.63-.73.8-.98.17-.25.34-.21.57-.13.24.08 1.5.7 1.76.83.26.12.43.18.5.28.06.1.06.59-.14 1.16Z"/>
+                </svg>
+              </span>
+              <span>Вотсап</span>
+            </a>
+            <a href="https://t.me/username" target="_blank" rel="noopener">
+              <span class="messenger-icon telegram" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M20.86 4.52 17.9 18.45c-.22.98-.8 1.22-1.62.76l-4.5-3.32-2.17 2.09c-.24.24-.44.44-.9.44l.32-4.58 8.34-7.54c.36-.32-.08-.5-.56-.18L6.5 12.6 2.06 11.2c-.97-.3-.98-.97.2-1.43L19.6 3.1c.8-.3 1.5.18 1.25 1.42Z"/>
+                </svg>
+              </span>
+              <span>Телеграм</span>
+            </a>
+            <a href="https://max.ru/username" target="_blank" rel="noopener">
+              <span class="messenger-icon max" aria-hidden="true">M</span>
+              <span>Макс</span>
+            </a>
+          </div>
+        </details>
+        <a class="header-action" href="#application">Записаться</a>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero section">
         <div class="hero-content">
+          <div class="hero-actions" aria-label="Основные действия">
+            <a class="button primary" href="#application">Записаться</a>
+            <a class="button secondary" href="#steps">Как проходит</a>
+          </div>
           <p class="eyebrow">Нижний Новгород · живой формат</p>
           <h1>Быстрые свидания в Нижнем Новгороде</h1>
           <p class="hero-lead">Вечер коротких встреч для тех, кто хочет знакомиться вживую.</p>
           <p class="hero-text">Организуем понятный формат без бесконечных переписок: анкета, подбор группы, уютная площадка и несколько спокойных разговоров за один вечер.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#application">Записаться</a>
-            <a class="button secondary" href="#steps">Как проходит</a>
-          </div>
           <div class="hero-proof" aria-label="Ключевые преимущества">
             <span>Без приложений</span>
             <span>Отбор участников</span>
             <span>Комфортная атмосфера</span>
           </div>
         </div>
-        <div class="hero-visual" aria-label="Анимация преимуществ компании" role="img">
-          <div class="visual-track">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <div class="hero-visual" aria-label="Преимущества формата быстрых свиданий" role="img">
           <div class="visual-center">
             <span class="visual-badge">NN</span>
             <strong>Speed Dating</strong>
-            <small>анкета · группа · встреча</small>
+            <small>вечер живых знакомств</small>
           </div>
-          <div class="benefit-bubble bubble-one">
+          <div class="visual-tile tile-one">
             <span>01</span>
-            <strong>Живое общение</strong>
-            <p>короткие встречи вместо чатов</p>
+            <strong>Без приложений</strong>
+            <p>знакомство происходит вживую</p>
           </div>
-          <div class="benefit-bubble bubble-two">
+          <div class="visual-tile tile-two">
             <span>02</span>
             <strong>Подбор группы</strong>
-            <p>учитываем возраст и формат</p>
+            <p>по возрасту и запросу</p>
           </div>
-          <div class="benefit-bubble bubble-three">
+          <div class="visual-tile tile-three">
             <span>03</span>
-            <strong>Организация</strong>
-            <p>понятные правила вечера</p>
+            <strong>Ведущий</strong>
+            <p>помогает вечеру идти легко</p>
           </div>
-          <div class="benefit-bubble bubble-four">
+          <div class="visual-tile tile-four">
             <span>04</span>
             <strong>Комфорт</strong>
-            <p>спокойная атмосфера</p>
+            <p>уютная площадка и правила</p>
           </div>
         </div>
       </section>
